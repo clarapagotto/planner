@@ -1,0 +1,448 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+}
+
+@keyframes brainTranslate {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  50% {
+    background-position: 0 -2vw, 0 0;
+  }
+  100% {
+    background-position: 0 0, 0 0;
+  }
+}
+
+/*CSS aba home*/
+
+header {
+  height: 20vh;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.menu ul {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.menu a {
+  color: #000000;
+  display: block;
+  font-size: 1.5em;
+  padding: 1.2em;
+  text-decoration: none;
+}
+
+.menu a:active,
+.menu a:hover {
+  color: #00b09c;
+}
+
+.home {
+  animation: brainTranslate 1.5s linear infinite;
+  background-image: url("../img/img-brain-920.png");
+  background-size: 100vw;
+  height: 100vh;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vw;
+}
+
+strong {
+  font-weight: bold;
+}
+
+i {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.title,
+.subtitle {
+  color: #00b09c;
+}
+
+.title {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;  
+}
+
+.subtitle {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.center {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.main p {
+  margin-bottom: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+  text-align: center;
+  width: 70vw;
+}
+
+.btn {
+  background-color: #00b09c;
+  border: none;
+  border-radius: 0.8em;
+  float: right;
+  height: 3.5em;
+  text-transform: uppercase;
+}
+
+.btn a {
+  color: #eeeeee;
+  font-size: 0.8em;
+  padding: 1.2em 2.5em;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn:hover {
+  background-color: #dddddd;
+  transition: background-color 0.4s;
+}
+
+.btn a:active,
+.btn a:hover {
+  color: #00b09c;
+  font-weight: bold;
+}
+
+/*CSS aba faça seu plano*/
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container p {
+  padding-top: 1.5em;
+  width: 70vw;
+}
+
+form {
+  align-items: flex-end;
+  display: grid;
+  gap: 1.5em;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+label {
+  color: #00b09c;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+
+.field {
+  border: 2px solid #00b09c;
+  border-radius: 0.8em;
+  height: 1.2em;
+  padding: 0.8em 0;
+  width: 100%;
+}
+
+.submit {
+  color: #ffffff;
+  font-size: 1.2em;
+  height: 2.8em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.submit:active,
+.submit:hover {
+  background-color: #dddddd;
+  color: #00b09c;
+  font-weight: bold;
+}
+
+/*areas do grid para imput*/
+
+.subject {
+  grid-area: subject;
+}
+
+.date {
+  grid-area: date;
+}
+
+.time {
+  grid-area: time;
+}
+
+.btnsubmit {
+  grid-area: submit;
+}
+
+.grid {
+  grid-template-areas:
+    "subject"
+    "date"
+    "time"
+    "submit";
+  grid-template-columns: 70vw;
+}
+
+.message {
+  color: #00b09c;
+  font-size: 0.8em;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.table {
+  font-size: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  width: 80vw;
+}
+
+.table-responsive {
+  width: 100%;
+}
+
+.desc {
+  background: #ffffff;
+  color: #999999;
+  font-size: 0.8em;
+}
+
+thead {
+  border-bottom: 2px solid #00b09c;
+  color: #00b09c;
+  font-weight: bold;
+}
+
+td,
+th {
+  border-bottom: 1px solid #ddd;
+  padding: 1em;
+  text-align: center;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #00b09c;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2em;
+  height: 20px;
+  vertical-align: middle;
+}
+
+/*breakpoints*/
+
+/* para telas menores que 590px*/
+@media (max-width: 590px) {
+  .home {
+    animation: brainTranslate 1.5s linear infinite;
+    background-image: url("../img/img-brain-590.png");
+    background-size: 100vw;
+    background-position: center;
+    height: 100vh;
+  }
+
+  /*configuração para tabela responsiva*/
+
+  .table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+
+  .table-responsive td,
+  .table-responsive th {
+    border-bottom: 0;
+    border-top: 1px solid #ddd;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 auto;
+  }
+
+  .table-responsive thead {
+    background: none;
+    border-bottom: 0;
+    border-top: 0;
+    color: #00b09c;
+    float: left;
+  }
+
+  .table-responsive tbody {
+    overflow-x: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: auto;
+  }
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+}
+
+/* para telas maiores que 360px*/
+@media (min-width: 360px) {
+  .grid {
+    grid-template-areas:
+      "subject subject"
+      "date time"
+      "submit submit";
+    grid-template-columns: 30vw;
+  }
+
+  .table {
+    font-size: 1em;
+  }
+}
+
+/* para telas maiores que 590px*/
+@media (min-width: 590px) {
+  .menu ul {
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: calc(6em - 20px);
+  }
+
+  .title {
+    font-size: 4.7em;
+  }
+
+  .grid {
+    grid-template-areas:
+      "subject subject subject"
+      "date time submit";
+    grid-template-columns: 25vw 25vw 20vw;
+    justify-content: center;
+  }
+
+  .message {
+    margin-left: calc((30vw - 3em) / 2);
+    text-align: left;
+  }
+
+  .table {
+    font-size: 1em;
+  }
+
+  .delete-btn {
+    display: none;
+    font-size: 1.5em;
+  }
+
+  .item:active .delete-btn,
+  .item:hover .delete-btn {
+    display: block;
+  }
+}
+
+/* para telas maiores que 920px*/
+@media (min-width: 920px) {
+  .home {
+    animation: brainTranslate 1.5s linear infinite;
+    background-image: url("../img/img-brain.png"), url("../img/img-home.png");
+    background-size: auto;
+    height: 100vh;
+  }
+
+  .main {
+    align-items: flex-end;
+    margin-right: 6em;
+    margin-top: 0;
+  }
+
+  i {
+    font-size: 1em;
+  }
+
+  .title {
+    font-size: 5.8em;
+    text-align: right;
+  }
+
+  .subtitle {
+    font-size: 2em;
+  }
+
+  .main p {
+    margin-bottom: 1.2em;
+    margin-left: 50vw;
+    margin-right: 0;
+    padding-top: 2em;
+    text-align: right;
+    width: 40vw;
+  }
+
+  .btn a {
+    font-size: 1em;
+  }
+
+  .grid {
+    gap: 1em;
+    grid-template-areas: "subject subject date time submit";
+    grid-template-columns: 15vw 15vw 15vw 15vw 10vw;
+    justify-content: center;
+  }
+
+  .message {
+    margin-left: calc((30vw - 4em) / 2);
+    text-align: left;
+  }
+}
+
+/* para telas maiores que 1200px*/
+@media (min-width: 1200px) {
+  .menu ul {
+    margin-right: calc(10em - 20px);
+  }
+  
+  .main {
+    margin-right: 10em;
+  }  
+
+  p {
+    font-size: 1.4em;
+  }
+}

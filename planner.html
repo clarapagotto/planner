@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fazer meu plano</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:400,400i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planner.html">Fazer meu plano</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1 class="title center">Faça seu plano</h1>
+      <p class="text center">
+        Para fazer seu plano, forneça o assunto, a data em que o tema foi
+        estudado pela primeira vez e o tempo de estudo dedicado ao mesmo, em
+        minutos.
+      </p>
+
+      <form class="grid" onsubmit="controller.add(event)">
+        <div class="subject">
+          <label for="subject">Assunto:</label>
+          <input
+            id="subject"
+            type="text"
+            placeholder="digite o assunto estudado"
+            class="field"
+            required
+            autofocus
+          />
+        </div>
+        <div class="date">
+          <label for="date">Data:</label>
+          <input id="date" type="date" class="field" required />
+        </div>
+        <div class="time">
+          <label for="time">Tempo de estudo (em min.):</label>
+          <input
+            id="time"
+            type="number"
+            placeholder="digite o tempo de estudo"
+            min="0.01"
+            step="0.01"
+            class="field"
+          />
+        </div>
+        <div class="btnsubmit">
+          <button class="btn submit" type="submit">Adicionar</button>
+        </div>
+      </form>
+    </div>
+    <div class="message" id="messageView">
+      <!--
+        Mensagem
+        --->
+    </div>
+    <div class="table" id="plannerView">
+      <!--
+           <table class="table-responsive">
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>ASSUNTO</th>
+                <th>1ª REVISÃO<br><i class="desc">1 dia depois, 10min/h</i></th>
+                <th>2ª REVISÃO<br><i class="desc">1 sem. depois, 5min/h</i></th>
+                <th>3ª REVISÃO<br><i class="desc">15 dias depois, 2min/h</i></th>
+                <th>4ª REVISÃO<br><i class="desc">1 mês depois, 1min/h</i></th>
+                <th></th>
+            </tr>
+        </thead>
+        --->
+    </div>
+
+    <script src="js/app/controllers/Controller.js"></script>
+    <script src="js/app/models/Plan.js"></script>
+    <script src="js/app/models/Planner.js"></script>
+    <script src="js/app/models/Message.js"></script>
+    <script src="js/app/helpers/DateHelper.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/PlannerView.js"></script>
+    <script src="js/app/views/MessageView.js"></script>
+
+    <script>
+      let controller = new Controller();
+    </script>
+  </body>
+</html>
+
+<!--test--->
